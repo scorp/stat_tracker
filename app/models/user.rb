@@ -17,6 +17,15 @@ class User < ActiveRecord::Base
   # anything else you want your user to change should be added here.
   attr_accessible :login, :email, :password, :password_confirmation
 
+  # ============================
+  # = Application Associations =
+  # ============================
+  has_many :statistics
+  
+
+  # =================
+  # = State Machine =
+  # =================
   acts_as_state_machine :initial => :pending
   state :passive
   state :pending, :enter => :make_activation_code
@@ -45,6 +54,11 @@ class User < ActiveRecord::Base
     transitions :from => :suspended, :to => :pending, :guard => Proc.new {|u| !u.activation_code.blank? }
     transitions :from => :suspended, :to => :passive
   end
+
+
+  # ==================
+  # = Authentication =
+  # ==================
 
   # Authenticates a user by their login name and unencrypted password.  Returns the user or nil.
   def self.authenticate(login, password)
