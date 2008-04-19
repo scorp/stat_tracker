@@ -1801,3 +1801,61 @@ Processing MainController#index (for 127.0.0.1 at 2008-04-19 14:08:47) [GET]
 Rendering template within layouts/main
 Rendering main/index
 Completed in 0.01063 (94 reqs/sec) | Rendering: 0.00137 (12%) | DB: 0.00437 (41%) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2008-04-19 14:14:26) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOgxjc3JmX2lkIiUwZmFhMmM3MTdkMDg1MDI2MzFm%0AMzY0Yjk5ZGFiNWRhODoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29u%0AdHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--2085239f20cfe5f7ed49d6a3cb9ddc322c142d0a
+  Parameters: {"action"=>"index", "controller"=>"main"}
+  [4;36;1mSQL (0.000220)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (0.003105)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000375)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering main/index
+Completed in 0.01091 (91 reqs/sec) | Rendering: 0.00224 (20%) | DB: 0.00370 (33%) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2008-04-19 14:14:29) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMGZhYTJjNzE3ZDA4NTAyNjMxZjM2NGI5OWRhYjVk%0AYTg6DnJldHVybl90bzA6DHVzZXJfaWRpBiIKZmxhc2hJQzonQWN0aW9uQ29u%0AdHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--5d031b8811e2988b484d79839cb02d12bd58c76e
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+  [4;35;1mUser Columns (0.003022)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000360)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000113)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000264)[0m   [0;1mUPDATE `users` SET `created_at` = '2008-04-19 13:52:00', `login` = 'will', `crypted_password` = 'd906d3b9dd1800ab160a489dcd2dc71bcf07f5c6', `activated_at` = '2008-04-19 17:55:52', `remember_token_expires_at` = NULL, `activation_code` = NULL, `salt` = '0d1beb33209239994bd470cb3691fcde22785e36', `remember_token` = NULL, `deleted_at` = NULL, `email` = 'will.bailey@gmail.com', `state` = 'active', `updated_at` = '2008-04-19 14:14:29' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.002212)[0m   [0mCOMMIT[0m
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to http://localhost:3000/
+Completed in 0.01612 (62 reqs/sec) | DB: 0.00597 (37%) | 302 Found [http://localhost/logout]
+
+
+Processing MainController#index (for 127.0.0.1 at 2008-04-19 14:14:29) [GET]
+  Session ID: BAh7BzoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6%0ARmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiHllvdSBoYXZlIGJlZW4gbG9n%0AZ2VkIG91dC4GOgpAdXNlZHsGOwdU--ac065f7c5dadaa6db8e31ccb63c04a15c589892f
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0.00055 (1814 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2008-04-19 14:14:29) [GET]
+  Session ID: BAh7BzoOcmV0dXJuX3RvIgYvIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVy%0AOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--339cd1faa33b9b71af4ad9b04aa8b92e254c2ab2
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering sessions/new
+Completed in 0.00363 (275 reqs/sec) | Rendering: 0.00174 (47%) | DB: 0.00000 (0%) | 200 OK [http://localhost/session/new]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2008-04-19 14:14:33) [POST]
+  Session ID: BAh7CDoMY3NyZl9pZCIlOGM2ZWZhYzVlYWI0ZmI5OWE2MGFhYjgxYzM0ODIz%0AMmY6DnJldHVybl90byIGLyIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6%0ARmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--6e16ae8985a28b2152c0e161ab711430c4c4aa12
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"a0aedf683328eb62de7a9aeb10ab80c79a6ab5a6", "action"=>"create", "controller"=>"sessions", "password"=>"r1chmond", "login"=>"will"}
+  [4;36;1mUser Load (0.000343)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`login` = 'will') AND (users.state = 'active') LIMIT 1[0m
+  [4;35;1mUser Columns (0.003088)[0m   [0mSHOW FIELDS FROM `users`[0m
+Redirected to http://localhost:3000/
+Completed in 0.00952 (105 reqs/sec) | DB: 0.00343 (36%) | 302 Found [http://localhost/session]
+
+
+Processing MainController#index (for 127.0.0.1 at 2008-04-19 14:14:33) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlOGM2ZWZhYzVlYWI0ZmI5OWE2MGFhYjgxYzM0ODIz%0AMmY6DnJldHVybl90bzA6DHVzZXJfaWRpBiIKZmxhc2hJQzonQWN0aW9uQ29u%0AdHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiG0xvZ2dlZCBp%0AbiBzdWNjZXNzZnVsbHkGOgpAdXNlZHsGOwlU--8e16e1ffc7c32352aee3f9cb0363d386cb4bf372
+  Parameters: {"action"=>"index", "controller"=>"main"}
+  [4;36;1mUser Columns (0.002491)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000379)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering main/index
+Completed in 0.00924 (108 reqs/sec) | Rendering: 0.00135 (14%) | DB: 0.00287 (31%) | 200 OK [http://localhost/]
