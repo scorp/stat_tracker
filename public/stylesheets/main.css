@@ -1,0 +1,51 @@
+/* ==================== */
+/* = Site Wide Styles = */
+/* ==================== */
+
+body{
+  background:#111;
+  padding:0px;
+  margin:0px;
+}
+
+a, a:link, a:visited a:hover, a:active{
+  font-family:helvetica, arial, sans-serif;
+  font-weight:normal;
+  font-size:12px;
+  text-decoration:none;
+  color:#fff;
+}
+
+#site_header{
+  background:#000;
+  position:relative;
+  border-bottom:1px solid #333;
+  font-family:helvetica, arial, sans-serif;
+}
+
+#site_logo{
+  font-size:16px;
+  padding:10px;
+  color:#fff;
+  padding:10px;
+  margin:0px;
+}
+
+#header_account_links{
+  position:absolute;
+  top:10px;
+  right:10px;
+}
+
+#content_container{
+  padding:10px;
+}
+
+/* =========== */
+/* = Content = */
+/* =========== */
+.content_block{
+  background:#C5CDAF;
+  padding:10px;
+  border-bottom:1px solid #F9FFE1;
+}
