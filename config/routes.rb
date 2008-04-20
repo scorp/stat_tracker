@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :statistics
+
+  map.resources :occurences
+
   map.resources :users
 
   map.resource :session
@@ -38,6 +42,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users, :member => { :suspend   => :put,
                                      :unsuspend => :put,
                                      :purge     => :delete}
+                                     
+  map.resources :statistics, :has_many => :occurences
   
   map.login '/signup', :controller => 'users', :action => 'new'
   map.login '/login', :controller => 'sessions', :action => 'new'

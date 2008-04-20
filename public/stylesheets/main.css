@@ -47,5 +47,5 @@ a, a:link, a:visited a:hover, a:active{
 .content_block{
   background:#C5CDAF;
   padding:10px;
-  border-bottom:1px solid #F9FFE1;
+  border:1px solid #F9FFE1;
 }

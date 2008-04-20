@@ -1,6 +1,18 @@
 <div class="content_block">
 <h2>welcome</h2>
-<p>
-  sup
-</p>
+<ul class="menu">
+  <li>charts</li>
+  <li><%= link_to "manage statistics", statistics_path %></li>
+</ul>
+<div id="dashboard">
+  <ul id="stats_list">
+    <% @stats.each do |s| %>
+      <li id="<%=s.id%>">
+        <%=s.title%> 
+          edit | log
+      </li>
+    <% end %>
+  </ul>
+
+</div>
 </div>

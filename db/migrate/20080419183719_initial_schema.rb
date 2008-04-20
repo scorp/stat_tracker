@@ -4,6 +4,7 @@ class InitialSchema < ActiveRecord::Migration
       t.integer :user_id
       t.string :title
       t.text :description
+      t.string :units
       t.timestamps
     end
     
@@ -18,6 +19,7 @@ class InitialSchema < ActiveRecord::Migration
   end
 
   def self.down
-    drop_table :statistics, :occurences
+    drop_table :statistics
+    drop_table :occurences
   end
 end

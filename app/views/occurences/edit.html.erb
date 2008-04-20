@@ -1,0 +1,12 @@
+<h1>Editing occurence</h1>
+
+<% form_for(@occurence) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @occurence %> |
+<%= link_to 'Back', occurences_path %>
